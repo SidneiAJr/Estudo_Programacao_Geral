@@ -14,7 +14,7 @@ abstract class teste6 implements teste, teste3{
     public function __construct(public int $n, public int $n2) {
         $this->n = $n;
         $this->n2 = $n2;
-        echo "Soma", $n+$n2;
+        echo "Soma", $n+$n2. "\n";
     }
 }
 
