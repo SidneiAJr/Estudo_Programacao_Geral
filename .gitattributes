@@ -1,4 +1,3 @@
-*.tpl linguist-language=Ruby
 *.css linguist-vendored=false
 *.html linguist-generated=false
 *.php linguist-language=PHP
