@@ -8,7 +8,8 @@ interface VerificarPersonagem{
 }
 
 interface VerificarItens{
-
+    public function Itens():void;
+    public function ItensCertos():bool;
 }
 
 interface VerificaHabilidade{
