@@ -1,18 +1,66 @@
-# Contribuições
+## 🚫 Contribuições
 
-Este repositório **não aceita contribuições externas**.
+Este repositório **NÃO aceita contribuições externas**.
 
-O código desenvolvido aqui é **estritamente para fins educacionais** e **para estudo pessoal**. Ele não deve ser utilizado para projetos comerciais, redistribuído, ou modificado sem a permissão explícita do proprietário.
+O código aqui presente é **estritamente para estudo pessoal** do autor.  
+Não é open source, não é colaborativo e não tem objetivo comercial.
 
-## Termos de Uso
+Pull requests, issues pedindo mudanças ou sugestões **não serão aceitos**.
 
-- Este repositório foi criado com **objetivos educacionais** e para demonstrar habilidades e conhecimentos adquiridos. Ele não deve ser utilizado em nenhum contexto comercial ou redistribuído.
-- **Não são permitidas contribuições externas**. Se você tiver interesse em sugerir melhorias ou compartilhar feedback, entre em contato diretamente com o proprietário do repositório.
-- O código aqui presente é protegido por direitos autorais e está licenciado sob uma **licença proprietária**, que proíbe cópias, modificações e distribuições sem permissão.
+---
 
-## Uso Permitido
+## ⚠️ Termos de Uso
 
-- O código pode ser utilizado apenas para **fins educacionais ou estudo pessoal**. 
-- **Não é permitido** modificar ou redistribuir este código sem permissão expressa do proprietário.
+Este repositório foi criado **exclusivamente para fins educacionais**.
 
-Agradecemos pela compreensão e pelo respeito às condições de uso deste repositório.
+Os códigos aqui contidos:
+- são de estudo
+- podem estar feios
+- podem estar incompletos
+- podem não seguir boas práticas
+- **e isso é intencional**
+
+Se você está procurando código limpo, profissional ou pronto para produção, **este repositório não é para você**.
+
+---
+
+## 🔒 Direitos e Licença
+
+Todo o conteúdo deste repositório é protegido por direitos autorais e está sob **licença proprietária**.
+
+❌ Não é permitido:
+- copiar
+- redistribuir
+- modificar
+- utilizar em projetos comerciais
+- reutilizar partes do código
+
+sem **permissão expressa do proprietário**.
+
+---
+
+## ✅ Uso Permitido
+
+✔️ Apenas para **leitura e estudo pessoal**  
+✔️ Apenas como referência educacional  
+
+Qualquer outro uso **não é autorizado**.
+
+---
+
+## 📌 Observação Final
+
+Este repositório existe para **aprender**, não para agradar terceiros.
+
+Não há compromisso com:
+- padrões de mercado
+- comentários
+- arquitetura
+- estilo de código
+
+Se não gostou:
+👉 ignore  
+👉 feche a aba  
+👉 siga sua vida  
+
+Agradeço o respeito às condições acima.
