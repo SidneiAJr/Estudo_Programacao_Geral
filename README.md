@@ -1,4 +1,4 @@
-# 📚 Repositório de Estudos – C#, PHP e Java (Old School)
+# 📚 Old School Studies| Repositório de Estudos – C#, PHP e Java (Old School)
 
 Este repositório existe **exclusivamente para estudo**.
 
