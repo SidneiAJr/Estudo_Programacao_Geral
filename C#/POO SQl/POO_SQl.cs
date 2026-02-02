@@ -8,20 +8,32 @@ namespace teste
 	{
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Menu | 1- Verificar Conex Banco | 2- Lista Simples");
-			int op;
-			op = int.Parse(Console.ReadLine());
-			switch (op){
-			case 1:
-			ConectarBanco cx1 = new ConectarBanco("localhost","empresa","3306","root","root");
-					cx1.verificarconexção();
-		    break;
-			case 2:
-			ListaTodos ls1 = new ListaTodos();
-					ls1.listar();
-			break;
-		default:
-		break;
+			Console.WriteLine("Menu | 1- Verificar Conex Banco | 2- Lista Simples | 3- Deletar | 4- Atualizar");
+int op = int.Parse(Console.ReadLine());
+
+switch (op)
+{
+    case 1:
+        ConectarBanco cx1 = new ConectarBanco("localhost", "empresa", "3306", "root", "root");
+        cx1.verificarconexção();
+        break;
+
+    case 2:
+        ListaTodos ls1 = new ListaTodos();
+        ls1.listar();
+        break;
+
+    case 3:
+        DeletarFuncionario del = new DeletarFuncionario();
+        del.deletar();
+        break;
+
+    case 4:
+        AtualizarFuncionario att = new AtualizarFuncionario();
+        att.atualizar();
+        break;
+}
+
 			}
 		}
 	}
@@ -100,6 +112,92 @@ namespace teste
 				Console.WriteLine("Erro ao listar dados: " + ex.Message);
 			}
 		}
+
+		class DeletarFuncionario
+{
+    private string connectionString;
+
+    public DeletarFuncionario()
+    {
+        this.connectionString = "Server=localhost;Port=3306;Database=empresa;Uid=root;Pwd=root;";
+    }
+
+    public void deletar()
+    {
+        Console.WriteLine("Digite o ID do funcionário para deletar:");
+        int id = int.Parse(Console.ReadLine());
+
+        string sql = "DELETE FROM funcionarios WHERE id_funcionario = @id";
+
+        try
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    int linhas = cmd.ExecuteNonQuery();
+
+                    if (linhas > 0)
+                        Console.WriteLine("Funcionário deletado com sucesso!");
+                    else
+                        Console.WriteLine("Funcionário não encontrado!");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Erro ao deletar: " + ex.Message);
+        }
+    }
+}
+class AtualizarFuncionario
+{
+    private string connectionString;
+
+    public AtualizarFuncionario()
+    {
+        this.connectionString = "Server=localhost;Port=3306;Database=empresa;Uid=root;Pwd=root;";
+    }
+
+    public void atualizar()
+    {
+        Console.WriteLine("Digite o ID do funcionário:");
+        int id = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite o novo nome:");
+        string nome = Console.ReadLine();
+
+        string sql = "UPDATE funcionarios SET nome_funcionario = @nome WHERE id_funcionario = @id";
+
+        try
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    int linhas = cmd.ExecuteNonQuery();
+
+                    if (linhas > 0)
+                        Console.WriteLine("Funcionário atualizado com sucesso!");
+                    else
+                        Console.WriteLine("Funcionário não encontrado!");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Erro ao atualizar: " + ex.Message);
+        }
+    }
+}
+
 
 	}
 
