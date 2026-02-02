@@ -47,6 +47,9 @@ Aqui vale:
 - testar
 - refatorar
 - aprender na marra
+- PORQUE EU ERREI?
+- Onde foi que eu errei?
+- Por que Deus?
 
 ---
 
