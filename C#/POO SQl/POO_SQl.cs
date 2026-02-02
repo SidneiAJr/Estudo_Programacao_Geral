@@ -197,14 +197,5 @@ class AtualizarFuncionario
         }
     }
 }
-
-
 	}
-
-
-
-
-
-
-
 }
